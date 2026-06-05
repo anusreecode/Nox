@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lavender Login</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="phone">
+
+    <div class="forms-container">
+
+        <!-- LOGIN PAGE -->
+
+        <section class="screen login-screen">
+
+            <div class="top-image">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1000" alt="">
+            </div>
+
+            <div class="curve">
+
+                <h2 class="welcome">
+                    Welcome Back ✨
+                </h2>
+
+                <p class="subtitle">
+                    Glad to see you again
+                </p>
+
+                <h1>Login</h1>
+
+                <input
+                type="text"
+                placeholder="Username or Email">
+
+                <input
+                type="password"
+                placeholder="Password">
+
+                <button>
+                    Login
+                </button>
+
+                <p class="switch-text">
+                    New here?
+                    <span id="showSignup">
+                        Sign Up
+                    </span>
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- SIGNUP PAGE -->
+
+        <section class="screen signup-screen">
+
+            <div class="top-image">
+                <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1000" alt="">
+            </div>
+
+            <div class="curve">
+
+                <h2 class="welcome">
+                    Welcome 🌸
+                </h2>
+
+                <p class="subtitle">
+                    Create your account
+                </p>
+
+                <h1>Sign Up</h1>
+
+                <input
+                type="text"
+                placeholder="Username">
+
+                <input
+                type="email"
+                placeholder="Email">
+
+                <input
+                type="password"
+                placeholder="Password">
+
+                <button>
+                    Sign Up
+                </button>
+
+                <p class="switch-text">
+                    Back again?
+                    <span id="showLogin">
+                        Login
+                    </span>
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
