@@ -71,16 +71,33 @@ height:33%;
 position:relative;
 overflow:hidden;
 }
-.login-hero{
+.signup-hero{
 
 height:38%;
 
-border-bottom-left-radius:100% 45%;
-border-bottom-right-radius:100% 45%;
+position:relative;
 
 overflow:hidden;
 }
+.signup-hero::before{
 
+content:"";
+
+position:absolute;
+
+width:150%;
+height:180px;
+
+background:#f6e5d0;
+
+left:-25%;
+
+top:-110px;
+
+border-radius:50%;
+
+z-index:2;
+}
 /* SIGNUP ARC */
 
 .signup-hero{
