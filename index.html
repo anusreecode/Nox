@@ -3,170 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Nox</title>
-
 <link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 </head>
-
 <body>
 
-<div class="phone">
+<div class="particles"></div>
 
-    <div class="container" id="container">
+<div class="door-container" id="doorContainer">
 
-        <!-- LOGIN -->
+    <div class="door left-door"></div>
+    <div class="door right-door"></div>
 
-        <section class="page login-page">
+    <div class="card-wrapper">
 
-            <div class="hero login-hero">
+        <div class="flip-card" id="flipCard">
 
-                <img
-                src="image/anime.jpg">
+            <!-- LOGIN -->
 
-                <div class="overlay">
+            <div class="card-side front">
 
-                    <h1>Welcome Back!</h1>
+                <div class="hero">
 
-                    <p>
-                        A study companion that helps you review leatures faster
-                    </p>
+                    <img src="image/retro sky.jpg" alt="AI">
 
-                </div>
+                    <h1>Welcome!</h1>
 
-            </div>
-
-            <div class="form-area">
-<h2 class="form-title">
-Login
-</h2>
-                <div class="input-box">
-
-                    <div class="icon">
-                        <i class="fa-regular fa-user"></i>
-                    </div>
-
-                    <input
-                    type="text"
-                    placeholder="Username">
+                    <p>Learn Smarter With AI</p>
 
                 </div>
 
-                <div class="input-box reverse">
+                <div class="form">
 
-<input
-type="password"
-placeholder="Password">
+                    <input type="text" placeholder="Username">
 
-<div class="icon">
-<i class="fa-solid fa-lock"></i>
-</div>
+                    <input type="password" placeholder="Password">
 
-                </div>
+                    <button id="loginBtn">Login</button>
 
-                <button class="main-btn">
-                    Login
-                </button>
-
-                <p class="switch">
-
-                    New here?
-
-                    <span id="showSignup">
-                        Sign Up
+                    <span class="switch">
+                        New here?
+                        <a id="showSignup">Sign Up</a>
                     </span>
 
-                </p>
+                </div>
 
             </div>
 
-        </section>
+            <!-- SIGNUP -->
 
-        <!-- SIGNUP -->
+            <div class="card-side back">
 
-        <section class="page signup-page">
-<h2 class="form-title">
-Sign Up
-</h2>
-            <div class="form-area signup-form">
+                <div class="hero">
 
-                <div class="input-box">
+                    <img src="images/retro sky.jpg" alt="AI">
 
-                    <div class="icon">
-                        <i class="fa-regular fa-user"></i>
-                    </div>
+                    <h1>Start Your Journey</h1>
 
-                    <input
-                    type="text"
-                    placeholder="Username">
+                    <p>Every path starts with small steps</p>
 
                 </div>
 
-                <div class="input-box reverse">
-<input
-                    type="email"
-                    placeholder="Email">
-                <div class="icon">
-                        <i class="fa-regular fa-envelope"></i>
-                </div>
+                <div class="form">
 
-                </div>
+                    <input type="text" placeholder="Username">
 
-                <div class="input-box">
+                    <input type="email" placeholder="Email">
 
-                    <div class="icon">
-                        <i class="fa-solid fa-lock"></i>
-                    </div>
+                    <input type="password" placeholder="Password">
 
-                    <input
-                    type="password"
-                    placeholder="Password">
+                    <button>Sign Up</button>
 
-                </div>
-
-                <button class="main-btn">
-                    Create Account
-                </button>
-
-                <p class="switch">
-
-                    Already here?
-
-                    <span id="showLogin">
-                        Login
+                    <span class="switch">
+                        Already have account?
+                        <a id="showLogin">Login</a>
                     </span>
 
-                </p>
-
-            </div>
-
-            <div class="hero signup-hero">
-
-                <img
-                src="image/anime.jpg">
-
-                <div class="overlay">
-
-                    <h1>Begin Your Journey</h1>
-
-                    <p>
-                        The fastest way for students to turn lectures into exam-ready study material 
-                    </p>
-
                 </div>
 
             </div>
 
-        </section>
+        </div>
 
     </div>
+
+</div>
+
+<!-- HOME PAGE -->
+
+<div class="home-page" id="homePage">
+
+    <h1>📚 AI Lecture Notes</h1>
+
+    <p>Welcome Back!</p>
+
+    <button class="settings-btn">⚙ Settings</button>
 
 </div>
 
