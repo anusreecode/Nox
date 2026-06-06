@@ -75,8 +75,8 @@ overflow:hidden;
 
 height:38%;
 
-border-bottom-left-radius:50% 18%;
-border-bottom-right-radius:50% 18%;
+border-bottom-left-radius:100% 35%;
+border-bottom-right-radius:100% 35%;
 
 overflow:hidden;
 }
@@ -87,8 +87,8 @@ overflow:hidden;
 
 height:38%;
 
-border-top-left-radius:50% 18%;
-border-top-right-radius:50% 18%;
+border-top-left-radius:100% 35%;
+border-top-right-radius:100% 35%;
 
 overflow:hidden;
 }
