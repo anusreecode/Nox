@@ -74,8 +74,8 @@ overflow:hidden;
 
 height:38%;
 
-border-top-left-radius:100% 45%;
-border-top-right-radius:100% 45%;
+border-bottom-left-radius:100% 45%;
+border-bottom-right-radius:100% 45%;
 
 overflow:hidden;
 /* SIGNUP ARC */
