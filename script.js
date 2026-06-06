@@ -1,31 +1,74 @@
-const flipCard = document.getElementById("flipCard");
+const loginSide =
+document.querySelector(".login-side");
 
-document.getElementById("showSignup")
-.addEventListener("click", () => {
-flipCard.classList.add("flip");
-});
+const signupSide =
+document.querySelector(".signup-side");
 
-document.getElementById("showLogin")
-.addEventListener("click", () => {
-flipCard.classList.remove("flip");
-});
+const showSignup =
+document.getElementById("showSignup");
 
-document.getElementById("loginBtn")
-.addEventListener("click", () => {
+const showLogin =
+document.getElementById("showLogin");
 
-const container =
-document.getElementById("doorContainer");
+showSignup.addEventListener("click", () => {
 
-container.classList.add("door-open");
+loginSide.classList.remove("active");
 
 setTimeout(() => {
 
-document.getElementById("homePage")
-.style.opacity = "1";
+signupSide.classList.add("active");
 
-document.getElementById("homePage")
-.style.pointerEvents = "all";
+},150);
 
-},800);
+});
+
+showLogin.addEventListener("click", () => {
+
+signupSide.classList.remove("active");
+
+setTimeout(() => {
+
+loginSide.classList.add("active");
+
+},150);
+
+});
+
+document
+.getElementById("loginBtn")
+.addEventListener("click", () => {
+
+const card =
+document.querySelector(".book-card");
+
+card.animate(
+[
+{
+transform:"scale(1)"
+},
+{
+transform:"scale(1.03)"
+},
+{
+transform:"scale(0.96)",
+opacity:.5
+},
+{
+transform:"scale(20)",
+opacity:0
+}
+],
+{
+duration:1400,
+easing:"ease-in-out"
+}
+);
+
+setTimeout(() => {
+
+window.location.href =
+"home.html";
+
+},1300);
 
 });
