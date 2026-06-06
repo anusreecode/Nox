@@ -71,41 +71,28 @@ height:33%;
 position:relative;
 overflow:hidden;
 }
-
 .login-hero{
 
-clip-path:
-polygon(
-0 0,
-100% 0,
-100% 75%,
-85% 82%,
-70% 90%,
-50% 100%,
-30% 90%,
-15% 82%,
-0 75%
-);
+height:38%;
+
+border-bottom-left-radius:50% 18%;
+border-bottom-right-radius:50% 18%;
+
+overflow:hidden;
 }
 
 /* SIGNUP ARC */
 
-.signup-hero{
 
-clip-path:
-polygon(
-0 25%,
-15% 18%,
-30% 10%,
-50% 0,
-70% 10%,
-85% 18%,
-100% 25%,
-100% 100%,
-0 100%
-);
+.login-hero{
+
+height:38%;
+
+border-bottom-left-radius:50% 18%;
+border-bottom-right-radius:50% 18%;
+
+overflow:hidden;
 }
-
 .hero img{
 
 width:100%;
