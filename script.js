@@ -1,5 +1,5 @@
 const container =
-document.querySelector(".forms-container");
+document.getElementById("container");
 
 const showSignup =
 document.getElementById("showSignup");
@@ -7,13 +7,13 @@ document.getElementById("showSignup");
 const showLogin =
 document.getElementById("showLogin");
 
-showSignup.addEventListener("click",()=>{
+showSignup.addEventListener("click", () => {
 
 container.classList.add("active");
 
 });
 
-showLogin.addEventListener("click",()=>{
+showLogin.addEventListener("click", () => {
 
 container.classList.remove("active");
 
