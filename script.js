@@ -30,7 +30,31 @@ document.getElementById(
 /* ========================= */
 /* PAGE SWITCHING */
 /* ========================= */
+let isTransitioning = false;
 
+function turnToSignup(){
+if(isTransitioning) return;
+isTransitioning = true;
+
+loginPage.classList.remove("active-page");
+
+setTimeout(()=>{
+signupPage.classList.add("active-page");
+isTransitioning = false;
+},300);
+}
+
+function turnToLogin(){
+if(isTransitioning) return;
+isTransitioning = true;
+
+signupPage.classList.remove("active-page");
+
+setTimeout(()=>{
+loginPage.classList.add("active-page");
+isTransitioning = false;
+},300);
+}
 
 /* ========================= */
 /* CONSTELLATION */
@@ -129,14 +153,15 @@ fill:"forwards"
   
 /* REDIRECT */
 
-setTimeout(() => {
+setTimeout(()=>{
+document.body.style.transition = "opacity 0.8s ease";
+document.body.style.opacity = "0";
 
-window.location.href =
-"home.html";
+setTimeout(()=>{
+window.location.href = "home.html";
+},800);
 
-},2500);
-
-}
+},2200);
 
 /* ========================= */
 /* EVENTS */
@@ -153,17 +178,21 @@ turnToLogin
 );
 
 let isEntering = false;
-enterButton.addEvenListener("click",()=>{
-  if(isEntering) return;
 
-  const email = document.querySelector("input[type='text']").value;
-  const password = document.querySelector("input[type='password').value;
+enterButton.addEventListener("click", ()=>{
+if(isEntering) return;
 
-                                          if(!email || !password){
-    alert("Fill the archive gates first");
-  }
-  isEntering = true;
-  start constellation
+const email = document.querySelector("input[type='text']").value;
+const password = document.querySelector("input[type='password']").value;
+
+if(!email || !password){
+alert("Fill the archive gates first");
+return;
+}
+
+isEntering = true;
+startConstellation();
+});
 
 /* ========================= */
 /* STARTUP EFFECT */
