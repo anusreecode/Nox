@@ -540,16 +540,3 @@ background:#fff;
 box-shadow:
 0 0 15px white;
 }
-
-.line{
-
-position:absolute;
-
-height:2px;
-
-background:#d4af37;
-
-transform-origin:left center;
-
-opacity:0;
-}
