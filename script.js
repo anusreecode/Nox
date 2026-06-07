@@ -161,8 +161,6 @@ overlay.style.opacity = "1";
 const stars =
 document.querySelectorAll(".star");
 
-const lines =
-document.querySelectorAll(".line");
 
 /* STAR POSITIONS */
 
@@ -207,112 +205,46 @@ fill:"forwards"
 
 /* DRAW LINES */
 
+/* MAGIC PORTAL */
+
 setTimeout(() => {
 
-const lineData = [
+stars.forEach((star) => {
 
-{
-x:20,
-y:25,
-length:110,
-angle:-10
-},
-
-{
-x:45,
-y:18,
-length:120,
-angle:15
-},
-
-{
-x:30,
-y:55,
-length:90,
-angle:-25
-},
-
-{
-x:60,
-y:60,
-length:90,
-angle:40
-},
-
-{
-x:30,
-y:55,
-length:140,
-angle:8
-}
-
-];
-
-lines.forEach((line,index)=>{
-
-line.style.left =
-lineData[index].x + "%";
-
-line.style.top =
-lineData[index].y + "%";
-
-line.style.width =
-lineData[index].length + "px";
-
-line.style.transform =
-`rotate(${lineData[index].angle}deg)`;
-
-line.animate(
+star.animate(
 [
 {
-opacity:0,
-width:"0px"
+transform:"translate(0,0) scale(1)"
 },
 {
-opacity:1,
-width:
-lineData[index].length + "px"
+transform:"translate(-50vw,-50vh) scale(0)"
 }
 ],
 {
-duration:700,
-delay:index*150,
+duration:1200,
 fill:"forwards"
 }
 );
 
 });
 
-},900);
-
-/* PORTAL EFFECT */
-
-setTimeout(() => {
-
 book.animate(
 [
 {
-transform:"scale(1)",
-opacity:1
+filter:"brightness(1)"
 },
 {
-transform:"scale(.92)",
-opacity:.9
-},
-{
-transform:"scale(30)",
-opacity:0
+filter:"brightness(2.5)"
 }
 ],
 {
-duration:1800,
-easing:"ease-in-out",
+duration:1200,
 fill:"forwards"
 }
 );
 
-},2200);
-
+},1200);
+  
 /* REDIRECT */
 
 setTimeout(() => {
@@ -320,7 +252,7 @@ setTimeout(() => {
 window.location.href =
 "home.html";
 
-},3900);
+},2500);
 
 }
 
