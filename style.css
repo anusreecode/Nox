@@ -126,51 +126,20 @@ z-index:10;
 
 .book-container{
 
-width:390px;
-height:844px;
+width:100%;
+height:100%;
 
 position:relative;
 
-border-radius:40px;
-
 overflow:hidden;
 
-background:
-linear-gradient(
-180deg,
-rgba(255,255,255,.08),
-rgba(255,255,255,.03)
-);
+background:none;
 
-backdrop-filter:blur(12px);
+border:none;
 
-border:
-1px solid rgba(255,255,255,.12);
+box-shadow:none;
 
-box-shadow:
-0 0 60px rgba(0,0,0,.5),
-0 0 30px rgba(212,175,55,.08);
-}
-
-/* GOLD FRAME */
-
-.book-container::before{
-
-content:"";
-
-position:absolute;
-
-top:15px;
-left:15px;
-right:15px;
-bottom:15px;
-
-border:
-1px solid rgba(212,175,55,.25);
-
-border-radius:30px;
-
-pointer-events:none;
+backdrop-filter:none;
 }
 
 /* ========================= */
@@ -206,15 +175,19 @@ visibility:visible;
 
 .image-section{
 
-height:46%;
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
 
 display:flex;
 justify-content:center;
-align-items:flex-end;
+align-items:flex-start;
 
-position:relative;
-
-overflow:hidden;
+pointer-events:none;
 }
 
 .image-section::after{
@@ -244,28 +217,22 @@ filter:blur(30px);
 
 .nox-image{
 
-height:105%;
-max-width:100%;
+position:absolute;
 
-object-fit:contain;
+top:-60px;
 
-animation:
-floatNox 7s ease-in-out infinite;
+width:115%;
+
+max-width:none;
+
+opacity:.92;
+
+object-fit:cover;
 
 filter:
-drop-shadow(0 0 25px rgba(212,175,55,.2));
-}
+drop-shadow(0 0 30px rgba(212,175,55,.15));
 
-@keyframes floatNox{
-
-0%,100%{
-transform:translateY(0px);
-}
-
-50%{
-transform:translateY(-12px);
-}
-
+z-index:1;
 }
 
 /* ========================= */
@@ -274,35 +241,54 @@ transform:translateY(-12px);
 
 .content-section{
 
-flex:1;
+position:absolute;
 
-padding:
-12px 30px 30px;
+bottom:0;
 
-display:flex;
-flex-direction:column;
+width:100%;
+
+padding:0 30px 50px;
+
+z-index:10;
 }
+.content-section::before{
 
+content:"";
+
+position:absolute;
+
+left:0;
+right:0;
+bottom:0;
+
+height:500px;
+
+background:
+linear-gradient(
+to top,
+rgba(4,5,12,.98),
+rgba(4,5,12,.88),
+transparent
+);
+
+z-index:-1;
+}
 /* ========================= */
 /* TITLE */
 /* ========================= */
 
 .title{
 
+font-size:60px;
+
 font-family:'Cinzel',serif;
 
-font-size:44px;
-
-text-align:center;
-
-letter-spacing:4px;
-
-color:#f1d58d;
+letter-spacing:6px;
 
 text-shadow:
-0 0 15px rgba(212,175,55,.25);
+0 0 15px rgba(212,175,55,.5),
+0 0 35px rgba(212,175,55,.25);
 }
-
 .subtitle{
 
 text-align:center;
