@@ -28,127 +28,9 @@ document.getElementById(
 );
 
 /* ========================= */
-/* PAGE TURN */
+/* PAGE SWITCHING */
 /* ========================= */
 
-function turnToSignup(){
-
-loginPage.style.pointerEvents = "none";
-
-loginPage.animate(
-[
-{
-transform:
-"perspective(1200px) rotateY(0deg)",
-opacity:1
-},
-{
-transform:
-"perspective(1200px) rotateY(-90deg)",
-opacity:.25
-}
-],
-{
-duration:700,
-easing:"ease-in-out",
-fill:"forwards"
-}
-);
-
-setTimeout(() => {
-
-loginPage.classList.remove(
-"active-page"
-);
-
-signupPage.classList.add(
-"active-page"
-);
-
-signupPage.animate(
-[
-{
-transform:
-"perspective(1200px) rotateY(90deg)",
-opacity:.25
-},
-{
-transform:
-"perspective(1200px) rotateY(0deg)",
-opacity:1
-}
-],
-{
-duration:700,
-easing:"ease-in-out"
-}
-);
-
-},700);
-
-}
-
-/* ========================= */
-/* BACK TO LOGIN */
-/* ========================= */
-
-function turnToLogin(){
-
-signupPage.animate(
-[
-{
-transform:
-"perspective(1200px) rotateY(0deg)",
-opacity:1
-},
-{
-transform:
-"perspective(1200px) rotateY(90deg)",
-opacity:.25
-}
-],
-{
-duration:700,
-easing:"ease-in-out",
-fill:"forwards"
-}
-);
-
-setTimeout(() => {
-
-signupPage.classList.remove(
-"active-page"
-);
-
-loginPage.classList.add(
-"active-page"
-);
-
-loginPage.animate(
-[
-{
-transform:
-"perspective(1200px) rotateY(-90deg)",
-opacity:.25
-},
-{
-transform:
-"perspective(1200px) rotateY(0deg)",
-opacity:1
-}
-],
-{
-duration:700,
-easing:"ease-in-out"
-}
-);
-
-loginPage.style.pointerEvents =
-"all";
-
-},700);
-
-}
 
 /* ========================= */
 /* CONSTELLATION */
@@ -270,10 +152,18 @@ showLogin.addEventListener(
 turnToLogin
 );
 
-enterButton.addEventListener(
-"click",
-startConstellation
-);
+let isEntering = false;
+enterButton.addEvenListener("click",()=>{
+  if(isEntering) return;
+
+  const email = document.querySelector("input[type='text']").value;
+  const password = document.querySelector("input[type='password').value;
+
+                                          if(!email || !password){
+    alert("Fill the archive gates first");
+  }
+  isEntering = true;
+  start constellation
 
 /* ========================= */
 /* STARTUP EFFECT */
