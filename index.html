@@ -1,100 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Arcane Notes</title>
+<title>Nox - Keeper of Knowledge</title>
 
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
 
-<div class="stars"></div>
+<!-- ========================= -->
+<!-- BACKGROUND -->
+<!-- ========================= -->
 
-<div class="container">
+<div class="background-layer"></div>
 
-<div class="book-card">
+<div class="star-field"></div>
 
-<div class="mascot-wrapper">
+<div class="constellation-overlay" id="constellationOverlay">
 
-<div class="magic-ring"></div>
+<div class="star s1"></div>
+<div class="star s2"></div>
+<div class="star s3"></div>
+<div class="star s4"></div>
+<div class="star s5"></div>
+<div class="star s6"></div>
+
+<div class="line l1"></div>
+<div class="line l2"></div>
+<div class="line l3"></div>
+<div class="line l4"></div>
+<div class="line l5"></div>
+
+</div>
+
+<!-- ========================= -->
+<!-- MAIN APP -->
+<!-- ========================= -->
+
+<div class="app-container">
+
+<div class="book-container" id="bookContainer">
+
+<!-- ==================================== -->
+<!-- LOGIN PAGE -->
+<!-- ==================================== -->
+
+<section class="page login-page active-page" id="loginPage">
+
+<div class="image-section">
 
 <img
-src="image/ai-mascot.png"
-alt="AI Mascot"
-class="mascot">
+src="image/Nox.png"
+alt="Nox"
+class="nox-image">
 
 </div>
 
-<h1>Arcane Notes</h1>
+<div class="content-section">
+
+<h1 class="title">
+NOX
+</h1>
 
 <p class="subtitle">
-Where Ancient Wisdom Meets Artificial Intelligence
+The Archive Awaits
 </p>
 
-<div class="form-side login-side active">
+<!-- USERNAME -->
 
 <div class="input-box left-icon">
+
 <i class="fa-solid fa-user"></i>
-<input type="text" placeholder="Scholar Name">
+
+<input
+type="text"
+placeholder="Email / Username">
+
 </div>
+
+<!-- PASSWORD -->
 
 <div class="input-box right-icon">
-<input type="password" placeholder="Secret Key">
+
+<input
+type="password"
+placeholder="Password">
+
 <i class="fa-solid fa-lock"></i>
+
 </div>
 
-<button class="magic-btn" id="loginBtn">
-Open The Archive
+<div class="extra-links">
+
+<a href="#">
+Forgot Password?
+</a>
+
+</div>
+
+<button
+class="magic-button"
+id="enterButton">
+
+ENTER THE ARCHIVE
+
 </button>
 
-<div class="switch-text">
-New scholar?
-<span id="showSignup">Create Account</span>
-</div>
+<div class="switch-section">
+
+<span>
+New to Nox?
+</span>
+
+<button
+class="link-button"
+id="showSignup">
+
+Awaken
+
+</button>
 
 </div>
 
-<div class="form-side signup-side">
+</div>
+
+</section>
+
+<!-- ==================================== -->
+<!-- SIGNUP PAGE -->
+<!-- ==================================== -->
+
+<section class="page signup-page" id="signupPage">
+
+<div class="image-section">
+
+<img
+src="image/Nox.png"
+alt="Nox"
+class="nox-image">
+
+</div>
+
+<div class="content-section">
+
+<h1 class="title">
+BECOME A SEEKER
+</h1>
+
+<p class="subtitle">
+Join The Living Archive
+</p>
+
+<!-- USERNAME -->
 
 <div class="input-box left-icon">
+
 <i class="fa-solid fa-user"></i>
-<input type="text" placeholder="Scholar Name">
+
+<input
+type="text"
+placeholder="Choose Username">
+
 </div>
 
+<!-- EMAIL -->
+
 <div class="input-box right-icon">
-<input type="email" placeholder="Ancient Mail">
+
+<input
+type="email"
+placeholder="Cosmic Email Address">
+
 <i class="fa-solid fa-envelope"></i>
+
 </div>
+
+<!-- PASSWORD -->
 
 <div class="input-box left-icon">
+
 <i class="fa-solid fa-lock"></i>
-<input type="password" placeholder="Secret Key">
+
+<input
+type="password"
+placeholder="Create Password">
+
 </div>
+
+<!-- CONFIRM -->
 
 <div class="input-box right-icon">
-<input type="password" placeholder="Confirm Key">
+
+<input
+type="password"
+placeholder="Confirm Password">
+
 <i class="fa-solid fa-key"></i>
+
 </div>
 
-<button class="magic-btn">
-Join The Academy
+<label class="terms">
+
+<input type="checkbox">
+
+<span>
+I agree to the Archive Terms
+</span>
+
+</label>
+
+<button
+class="magic-button"
+id="awakenButton">
+
+AWAKEN
+
 </button>
 
-<div class="switch-text">
-Already registered?
-<span id="showLogin">Login</span>
+<div class="switch-section">
+
+<span>
+Already here?
+</span>
+
+<button
+class="link-button"
+id="showLogin">
+
+Log In
+
+</button>
+
 </div>
 
 </div>
+
+</section>
 
 </div>
 
@@ -103,4 +257,5 @@ Already registered?
 <script src="script.js"></script>
 
 </body>
+
 </html>
